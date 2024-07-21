@@ -1,12 +1,20 @@
-# RubikProxy README
+# RubikProxy
 
-RubikProxy is a VS Code extension that adds a status bar item for quick access to the RubikProxy webpage.
+RubikProxy is a VS Code extension that adds a status bar item for quick access to the RubikProxy webpage and other useful links.
 
 ## Features
 
 - Adds a status bar item labeled "RubikProxy" with a rocket icon.
-- Clicking the status bar item opens the RubikProxy webpage in your default browser.
+- Clicking the status bar item opens a menu to select between the RubikProxy portfolio or GitHub page.
+- Configurable status bar color through settings.
+- Commands to update the status bar color, toggle visibility, and refresh state.
 
+### Commands
+
+- **RubikProxy: Show Menu** (`rubikproxy.showMenu`): Opens a menu to choose between visiting the RubikProxy portfolio or GitHub page.
+- **RubikProxy: Update Status Bar Color** (`rubikproxy.updateColor`): Updates the color of the status bar item based on user settings.
+- **RubikProxy: Toggle Status Bar Visibility** (`rubikproxy.toggleVisibility`): Toggles the visibility of the status bar item.
+- **RubikProxy: Refresh Status Bar State** (`rubikproxy.refreshState`): Refreshes the status bar item's state.
 
 > Tip: You can add an animation or screenshot of your extension in action to make it more visually appealing.
 
@@ -16,13 +24,23 @@ This extension does not have any specific requirements or dependencies.
 
 ## Extension Settings
 
-This extension does not add any VS Code settings.
+RubikProxy adds the following settings:
+
+- `rubikproxy.statusBarColor`: The color of the status bar item. Default is `orange`.
+- `rubikproxy.webpageUrl`: The URL of the webpage to open when clicking the status bar item. Default is `https://vinsanjay.me`.
 
 ## Known Issues
 
 There are no known issues at this time.
 
 ## Release Notes
+
+### 0.0.2
+
+- Added a menu for quick access to RubikProxy portfolio and GitHub page.
+- Introduced new commands: `toggleVisibility` and `refreshState`.
+- Added settings for status bar color and webpage URL.
+- Improved the initial activation event to ensure the extension activates on VS Code startup.
 
 ### 0.0.1
 
