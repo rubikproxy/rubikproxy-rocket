@@ -55,6 +55,13 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage('Status bar state refreshed');
     });
 
+    let hello = vscode.commands.registerCommand('rubikproxy.helloWorld', function () {
+        // The code you place here will be executed every time your command is executed
+        // Display a message box to the user
+        vscode.window.showInformationMessage('🚀 RUBIKPROXY EXTENSION WAS ACTIVATED ');
+    });
+    context.subscriptions.push(hello);
+
     // Register settings change listener
     vscode.workspace.onDidChangeConfiguration(e => {
         if (e.affectsConfiguration('rubikproxy.statusBarColor')) {
@@ -73,3 +80,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 export function deactivate() {}
+
