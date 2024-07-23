@@ -3,14 +3,18 @@
   "displayName": "RubikProxy",
   "description": "A VS Code extension to open the RubikProxy webpage.",
   "version": "0.0.2",
+  "publisher": "sanjaykumar",  
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": ["Other"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubikproxy/rubikproxy-rocket"
+  },
+  "icon": "image/logo.png", 
   "activationEvents": [
-    "*",
-    "onCommand:rubikproxy.showMenu",
-    "onCommand:rubikproxy.updateColor"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,6 +34,10 @@
       {
         "command": "rubikproxy.refreshState",
         "title": "Refresh Status Bar State"
+      },
+      {
+        "command": "rubikproxy.helloWorld",
+        "title": "Hello World"
       }
     ],
     "configuration": {
