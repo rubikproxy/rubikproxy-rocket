@@ -9,7 +9,6 @@ export function activate(context: vscode.ExtensionContext) {
     brand.color = vscode.workspace.getConfiguration('rubikproxy').get('statusBarColor', 'orange');
     brand.show();
 
-    // Command to show the menu
     let showMenuCommand = vscode.commands.registerCommand('rubikproxy.showMenu', async () => {
         const options = [
             { label: 'Open Portfolio', description: 'Open Vinsanjay Website' },
@@ -29,7 +28,6 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    // Command to update status bar color
     let updateColorCommand = vscode.commands.registerCommand('rubikproxy.updateColor', () => {
         const newColor = vscode.workspace.getConfiguration('rubikproxy').get('statusBarColor', 'orange');
         brand.color = newColor;
@@ -37,7 +35,6 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage(`Status bar color updated to ${newColor}`);
     });
 
-    // Command to toggle status bar visibility
     let toggleVisibilityCommand = vscode.commands.registerCommand('rubikproxy.toggleVisibility', () => {
         if (brand.text) {
             brand.hide();
@@ -48,7 +45,6 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    // Command to refresh status bar state
     let refreshStateCommand = vscode.commands.registerCommand('rubikproxy.refreshState', () => {
         brand.color = vscode.workspace.getConfiguration('rubikproxy').get('statusBarColor', 'orange');
         brand.show();
@@ -56,13 +52,10 @@ export function activate(context: vscode.ExtensionContext) {
     });
 
     let hello = vscode.commands.registerCommand('rubikproxy.helloWorld', function () {
-        // The code you place here will be executed every time your command is executed
-        // Display a message box to the user
         vscode.window.showInformationMessage('🚀 RUBIKPROXY EXTENSION WAS ACTIVATED ');
     });
     context.subscriptions.push(hello);
 
-    // Register settings change listener
     vscode.workspace.onDidChangeConfiguration(e => {
         if (e.affectsConfiguration('rubikproxy.statusBarColor')) {
             brand.color = vscode.workspace.getConfiguration('rubikproxy').get('statusBarColor', 'orange');
