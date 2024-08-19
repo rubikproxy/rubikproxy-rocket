@@ -1,6 +1,6 @@
 # RubikProxy
 
-RubikProxy is a VS Code extension that adds a status bar item for quick access to the RubikProxy webpage and other useful links.
+RubikProxy's is a VS Code extension that adds a status bar item for quick access to the RubikProxy webpage and other useful links.
 
 ## Features
 
